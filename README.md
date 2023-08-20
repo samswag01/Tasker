@@ -53,6 +53,7 @@ You can see a live demo of the application [here](https://samswag01.github.io/Ta
 3. Edit or delete tasks by clicking on the edit or delete icon.
 4. Mark tasks as completed by clicking them.
 5. You can click on the bottom navigation to switch between current project and project list.
+6. Click on project name (at nav bar) to clear completed (sorry:( )
 
 ## Contributing
 
