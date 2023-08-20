@@ -22,7 +22,7 @@ Tasker is a simple web-based application for managing tasks and projects.
 
 ## Demo
 
-You can see a live demo of the application [here](#).
+You can see a live demo of the application [here](https://samswag01.github.io/Tasker).
 
 ### Installation
 
