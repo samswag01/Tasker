@@ -1,0 +1,228 @@
+:root {
+  --bg-color: #fee2e2; /* 100 */
+  --cur-pro: #f87171; /* 400 */
+  --top-nav: #ef4444; /* 500 */
+  --b-nav: var(--top-nav);
+  --active-tab: #991b1b; /* 800 */
+  --btn: #b91c1c; /* 700 */
+}
+:root {
+  --bg-color: #e0f2fe;
+  --cur-pro: #38bdf8;
+  --top-nav: #0ea5e9;
+  --b-nav: var(--top-nav);
+  --active-tab: #075985;
+  --btn: #0369a1;
+}
+@font-face {
+  font-display: swap;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 300;
+  src: url("fonts/Poppins-Regular.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins'
+}
+body {
+  background-color: var(--bg-color);
+}
+.top-nav {
+  position: fixed;
+  width: 100%;
+  background: var(--top-nav);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 10px;
+  color: #fff;
+}
+.content {
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+img {
+  filter: invert(1);
+}
+span.logo {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+span.logo p {
+  font-weight: bold;
+  font-size: 18px;
+}
+span.logo img {
+  width: 40px;
+}
+nav .add {
+  width: 40px;
+  cursor: pointer;
+}
+.bnav {
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  background-color: var(--b-nav);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+.bnav img {
+  width: 35px;
+}
+.bnav span {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bnav span.active {
+  background-color: var(--active-tab);
+}
+.todos, .projects {
+  cursor: pointer;
+}
+/* The Modal */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 1;
+}
+.modal-overlay.active {
+  display: flex;
+  opacity: 1;
+  pointer-events: auto;
+}
+.new-project {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.7);
+  background-color: var(--top-nav);
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.modal-overlay.active .new-project {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.new-project p {
+  text-align: center;
+  font-size: 17px;
+}
+.new-project input {
+  border: 0;
+  outline: 0;
+  height: 40px;
+  margin: 10px auto;
+  border-radius: 3px;
+  padding: 0 10px;
+}
+.new-project .btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.new-project button {
+  background: var(--btn);
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  width: 100px;
+  border-radius: 3px;
+}
+
+.card, .task-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  padding: 0 20px;
+  margin: 7px;
+  background-color: #fff;
+  cursor: pointer;
+}
+.card.current {
+  background-color: var(--cur-pro);
+  color: #fff;
+}
+.card .delete {
+  cursor: pointer;
+}
+.card .delete img,
+.task-card .delete img,
+.custom .edit img{
+  filter: invert(0);
+  width: 20px;
+}
+.card.current .delete img,
+.task-card.done .delete img,
+.card.current .custom .edit img,
+.task-card.done .custom .edit img {
+  filter: invert(1);
+}
+.task-card.done {
+  background-color: #a8a29e;
+  color: #fff;
+}
+.task-card .custom,
+.card .custom{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+.project-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+.detail {
+  display: none;
+}
+.detail.active {
+  display: block;
+}
+.detail.content {
+  
+}
+.pList {
+  display: none;
+}
+.pList.active {
+  display: block;
+}
+
+/* DARK MODE */
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: initial;
+  }
+  .card.current .delete img,
+  .task-card.done .delete img,
+  .task-card.done .custom .edit img,
+  .card.current .custom .edit img {
+    filter: invert(0);
+  }
+}
