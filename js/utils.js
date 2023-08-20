@@ -5,28 +5,6 @@ export const Util = {
     const doc = parser.parseFromString(html, 'text/html');
     return doc.body.firstChild;
   },
-  prepareModal (modal, okFunc) {
-    modal.classList.add('active');
-    document.body.appendChild(modal);
-    const dismiss = () => {
-      modal.classList.remove('active');
-      modal.remove();
-    }
-    
-    const sendValue = () => {
-      okFunc('worked')
-      dismiss();
-    }
-    
-    const ok = modal.querySelector('.ok'),
-      cancel = modal.querySelector('.cancel');
-      
-    modal.addEventListener('click', (event) => {
-      if (event.target === modal) dismiss();
-    })
-    ok.addEventListener('click', sendValue);
-    cancel.addEventListener('click', dismiss);
-  }
 }
 
 export const Templates = {
