@@ -29,13 +29,13 @@ You can see a live demo of the application [here](#).
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/my-todo-app.git
+   git clone https://github.com/samswag01/Tasker.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd my-todo-app
+   cd Tasker
    ```
 
 ## Usage
