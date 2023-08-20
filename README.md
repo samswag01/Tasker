@@ -52,6 +52,7 @@ You can see a live demo of the application [here](https://samswag01.github.io/Ta
 2. Click the "+" button to create a new task.
 3. Edit or delete tasks by clicking on the edit or delete icon.
 4. Mark tasks as completed by clicking them.
+5. You can click on the bottom navigation to switch between current project and project list.
 
 ## Contributing
 
