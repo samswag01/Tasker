@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Todos</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="js/app.js" type="module" defer></script>
+</head>
 
+<body>
+  <nav class="top-nav">
+    <span class="logo">
+      <img src="res/calendar-check.svg" alt="">
+      <p>MyTodos</p>
+    </span>
+    
+    <img class="add" src="res/plus.svg" alt="add-todo">
+  </nav>
+  <div class="modal-overlay">
+    <div class="new-project">
+      <p>Create New Project</p>
+      <input type="text" placeholder="Enter Name">
+      <div class="btn">
+        <button class="cancel">Cancel</button>
+        <button class="ok">OK</button>
+      </div>
+    </div>
+  </div>
+  <div class="content detail active">
+
+  </div>
+  
+  <div class="content pList"></div>
+  
+  <nav class="bnav">
+    <span class="tab1 active"><img class="todos" src="res/current.svg" alt="current"></span>
+    <span class="tab2"><img class="projects" src="res/list.svg" alt="list"></span>
+  </nav>
+  
+</body>
+</html>
